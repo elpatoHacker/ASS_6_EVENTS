@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Growing an Image</title>
+</head>
+<style>
+
+.growingImage {
+	width: 150px;
+	height: 100px;
+}
+
+</style>
+<body>
+<img src="lego.jpg" alt="picture of a lego figure" class="growingImage" 
+onClick="grow()" id="legoGrowing"></img>
+
+<script>
+function grow() {
+	var image = document.getElementById("legoGrowing");
+	var newWidth = (image.width + 7) + "px";
+	var newHeight = (image.height + 5) + "px";
+	image.style.width = newWidth;
+	image.style.height = newHeight;
+}
+</script>
+
+</body>
+</html>

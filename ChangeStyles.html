@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change 7 Styles</title>
+</head>
+<body>
+<div onClick="changeStyle()"><h3>Click this text</h3></div>
+<hr>
+
+<div id="toChange">
+click "click this text" above to change this div in several ways
+</div>
+
+<script>
+function changeStyle() {
+	var text = document.getElementById("toChange");
+	text.innerHTML = "pues mira que bonita estuvo el dia";
+	text.style.fontSize = "24px";
+	text.style.color = "green";
+	text.style.fontWeight = "600";
+	text.style.border = "solid 5px red";
+	text.style.float = "right";
+	text.style.width = "300px";
+	text.style.padding = "50px";
+	text.style.backgroundColor = "lightgray";
+}
+</script>
+
+</body>
+</html>

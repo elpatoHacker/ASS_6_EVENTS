@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Increase Pixel Size</title>
+</head>
+
+<body>
+
+<input id="push" type="button" onclick="increaseSize()" value="Increment by 1px">
+<br>
+<br>
+<div id="changeMe" style="font-size:16px">Increase my point size by 1px each click.</div>
+
+<script>
+function increaseSize() {
+	var text = document.getElementById("changeMe");
+	var newSize = parseInt(text.style.fontSize.substring(0, 2)) + 1 + "px";
+	text.style.fontSize = newSize;
+}
+</script>
+
+</body>
+</html>

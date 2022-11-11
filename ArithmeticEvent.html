@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- DANIEL GIL -->
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Daniel Gil</title>
+</head>
+<style>
+
+/* Daniel Gil
+csc337: 5:00-6:25pm */
+
+.styleTopPara {
+margin-bottom: 0;
+}
+
+.styleBottomPara {
+margin-top: 0;
+}
+
+</style>
+<body>
+
+<h1>Calculator</h1>
+<p class="styleTopPara"> x <input type="text" id="xNumber"> </p>
+<p class="styleBottomPara"> y <input type="text" id="yNumber"> </p> 
+
+<input type="button" onclick="aFunction()" value="Show results">
+
+<br>
+<br>
+
+<div id="sumToChange"></div>
+<div id="subToChange"></div>
+<div id="mulToChange"></div>
+<div id="divToChange"></div>
+<div id="modToChange"></div>
+
+ 
+
+<script>
+
+function aFunction() {
+
+  var inputX = document.getElementById("xNumber");
+  var inputY = document.getElementById("yNumber");
+
+  var x = Number(inputX.value);
+  var y = Number(inputY.value);
+
+  sum = x + " + " + y + " = " + (x + y);
+  sub = x + " - " + y + " = " + (x - y);
+  mul = x + " * " + y + " = " + (x * y);
+  div = x + " / " + y + " = " + (x / y);
+  mod = x + " % " + y + " = " + (x % y);
+
+  var summation = document.getElementById("sumToChange");
+  var subtraction = document.getElementById("subToChange");
+  var multiplication = document.getElementById("mulToChange");
+  var division = document.getElementById("divToChange");
+  var modulation = document.getElementById("modToChange");
+
+  summation.innerHTML = sum;
+  subtraction.innerHTML = sub;
+  multiplication.innerHTML = mul;
+  division.innerHTML = div;
+  modulation.innerHTML = mod;
+
+}
+
+</script>
+
+</body>
+</html>

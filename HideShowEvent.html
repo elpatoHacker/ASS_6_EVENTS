@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hide / Show</title>
+</head>
+<body>
+
+<input id="push" type="button" onclick="hideShowText()" value="Hide">
+<br>
+<br>
+<div id="magic">This text will appear and dissapear.</div>
+
+<script>
+function hideShowText() {
+	var text = document.getElementById("magic");
+	var button = document.getElementById("push");
+	
+	if (text.innerHTML === ""){
+		text.innerHTML = "This text will appear and dissapear.";
+
+		button.value = "Hide";
+		return;
+	}
+	
+	text.innerHTML = "";
+	button.value = "Show";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Daniel Gil</title>
+</head>
+
+<style>
+.buttonTable {
+	background-color: lightgray;
+	width: 150px;
+	height: 500px;
+	float: left;
+}
+
+.buttonTable ul {
+	list-style-type: none;
+    padding: 0px;
+}
+
+.buttonTable li {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#section {
+	width: 650px;
+	height: 496px;
+}
+
+</style>
+
+<body>
+<h1>Using Java Script to change the HTML</h1>
+
+<div class="buttonTable">
+
+<ul>
+	<li><input type="button" onclick="setFrameTo(0)" value="0) Calculator"></li>
+	<li><input type="button" onclick="setFrameTo(1)" value="1) Hide / Show"></li>
+	<li><input type="button" onclick="setFrameTo(2)" value="2) Change 7 Styles"></li>
+	<li><input type="button" onclick="setFrameTo(3)" value="3) Add to Array"></li>
+	<li><input type="button" onclick="setFrameTo(4)" value="4) Over Out"></li>
+	<li><input type="button" onclick="setFrameTo(5)" value="5) Growing Image"></li>
+	<li><input type="button" onclick="setFrameTo(6)" value="6) Pixel Increase"></li>
+	<li><input type="button" onclick="setFrameTo(7)" value="7) Running Sum"></li>
+	<li><input type="button" onclick="setFrameTo(8)" value="8) Stack Changes"></li>
+</ul>
+
+</div>
+<iframe id="section" src="intro.html"></iframe>
+<h2>Daniel Gil</h2>
+
+<script>
+var x = [];
+x[0] = "ArithmeticEvent.html";
+x[1] = "HideShowEvent.html";
+x[2] = "ChangeStyles.html";
+x[3] = "NameAddEvent.html";
+x[4] = "HoverEvent.html";
+x[5] = "GrowingImageEvent.html";
+x[6] = "IncreasePixelEvent.html";
+x[7] = "SumEvent.html";
+x[8] = "StackChangesEvent.html";
+
+function setFrameTo(number) {
+	var frame = document.getElementById("section");
+	frame.src = x[number];
+}
+</script>
+
+</body>
+</html>

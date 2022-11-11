@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hover Event</title>
+</head>
+<style>
+.hoverButton {
+	background-color: #FFB6C1;
+	width: 150px;
+	height: 20px;
+	border: 2px solid red;
+	text-align: center;
+	margin: 20px;
+}
+</style>
+<body>
+<div class="hoverButton" onmouseleave="outMouse()" onmouseover="inMouse()">Hover over Me</div>
+<div class="hoverButton" id="mouseWatcher"></div>
+
+<script>
+var mouseHovers = 0;
+var mouseExits = 0;
+
+function outMouse() {
+	mouseExits++;
+	var text = document.getElementById("mouseWatcher");
+	text.innerHTML = "Exited " + mouseExits + " events";
+}
+
+function inMouse() {
+	mouseHovers++;
+	var text = document.getElementById("mouseWatcher");
+	text.innerHTML = "Entered " + mouseHovers + " events";
+}
+
+</script>
+
+</body>
+</html>

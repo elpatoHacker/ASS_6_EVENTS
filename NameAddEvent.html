@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Name to Array</title>
+</head>
+
+<body>
+<div>Enter a name: <input onChange="addToArray()" id="aName"></div>
+<p>The array of names:</p>
+<div id="listOfNames"></div>
+
+
+<script>
+var names = [];
+
+function addToArray() {
+	var textBox = document.getElementById("aName");
+	var listNames = document.getElementById("listOfNames");
+	
+	names.push(textBox.value);
+	textBox.value = "";
+	
+	var textOfNames = "";
+	for (let i = 0; i < names.length; i++) {
+		textOfNames += (i + 1) + ": " + names[i] + "<br>";
+	}
+	
+	listNames.innerHTML = textOfNames;
+}
+</script>
+
+</body>
+</html>
